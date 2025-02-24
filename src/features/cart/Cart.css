@@ -1,0 +1,133 @@
+/* Cart.css */
+
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cart-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f9fc;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.cart-item div {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.cart-item h4 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.cart-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cart-item button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item button:hover {
+  background-color: #ff4c4c;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Empty cart message */
+.cart-container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .cart-item button {
+    width: 100%;
+  }
+}
+
+.order-button {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.order-button:active {
+  transform: scale(0.98);
+}
+
+.order-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

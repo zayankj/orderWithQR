@@ -1,0 +1,120 @@
+.cream-menu {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cream-menu h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.cream-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cream-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cream-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 111, 97, 0.4);
+  transform: translateY(-5px);
+}
+
+.cream-card img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cream-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+  margin: 8px 0;
+  min-height: 48px; /* Ensures name alignment even with longer names */
+}
+
+.cream-card p {
+  font-size: 1rem;
+  color: #ff6f61;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e85c50;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design for Smartphones */
+@media (max-width: 480px) {
+  .cream-card {
+    padding: 12px;
+  }
+
+  .cream-card img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .cream-card img {
+    height: 180px;
+  }
+
+  .add-to-cart-btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Desktops & Larger Screens */
+@media (min-width: 769px) {
+  .cream-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .cream-card img {
+    height: 200px;
+  }
+}
